@@ -31,3 +31,4 @@ out/
 ### VS Code ###
 .vscode/
 workspace.code-workspace
+src/main/resources/.DS_Store
