@@ -1,0 +1,58 @@
+{
+  "$schema": "https://unpkg.com/@camunda/zeebe-element-templates-json-schema/resources/schema.json",
+  "name": "LegacyConnector.json",
+  "id": "4d48e687-589d-460c-83cb-70031f1551d2",
+  "appliesTo": [
+    "bpmn:Task"
+  ],
+  "properties": [
+    {
+      "type": "Hidden",
+      "value": "io.camunda.example.LegacySystemConnector:1",
+      "binding": {
+        "type": "zeebe:taskDefinition:type"
+      }
+    },
+    {
+      "label": "Request",
+      "type": "String",
+      "optional": true,
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "request"
+      }
+    },
+    {
+      "label": "Token",
+      "type": "String",
+      "optional": false,
+      "feel": "optional",
+      "binding": {
+        "type": "zeebe:input",
+        "name": "token"
+      }
+    },
+    {
+      "label": "Result Variable",
+      "description": "Name of variable to store the response in",
+      "group": "output",
+      "type": "String",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "resultVariable"
+      }
+    },
+    {
+      "label": "Result Expression",
+      "description": "Expression to map the response into process variables",
+      "group": "output",
+      "type": "Text",
+      "feel": "required",
+      "binding": {
+        "type": "zeebe:taskHeader",
+        "key": "resultExpression"
+      }
+    }
+  ]
+}

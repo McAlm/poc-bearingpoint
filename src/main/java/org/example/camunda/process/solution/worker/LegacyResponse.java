@@ -6,23 +6,23 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 public class LegacyResponse {
 
-    private boolean success;
+    private Boolean success;
 
-    public boolean isSuccess() {
+    public Boolean isSuccess() {
         return success;
     }
 
-    public void setSuccess(boolean success) {
+    public void setSuccess(Boolean success) {
         this.success = success;
     }
 
-    private int result;
+    private Integer result;
 
-    public int getResult() {
+    public Integer getResult() {
         return result;
     }
 
-    public void setResult(int result) {
+    public void setResult(Integer result) {
         this.result = result;
     }
 
