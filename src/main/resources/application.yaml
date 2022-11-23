@@ -1,0 +1,23 @@
+# https://github.com/camunda-community-hub/spring-zeebe#configuring-camunda-platform-8-saas-connection
+# https://github.com/camunda-community-hub/spring-zeebe#additional-configuration-options
+zeebe:
+  client:
+    broker:
+      gatewayAddress: 127.0.0.1:26500
+    security:
+      plaintext: true
+
+spring:
+  datasource:
+    type: org.postgresql.ds.PGSimpleDataSource
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:  
+    hibernate:
+      ddl-auto: create
+      hbm2ddl.auto: create   
+    show-sql: true
+    generate-ddl: true
+
+MY_TOKEN: mytoken
