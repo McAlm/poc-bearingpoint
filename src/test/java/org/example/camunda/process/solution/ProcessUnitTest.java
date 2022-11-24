@@ -9,22 +9,19 @@ import static org.mockito.Mockito.when;
 import io.camunda.zeebe.process.test.api.ZeebeTestEngine;
 import io.camunda.zeebe.process.test.inspections.InspectionUtility;
 import io.camunda.zeebe.process.test.inspections.model.InspectedProcessInstance;
-import io.camunda.zeebe.spring.test.ZeebeSpringTest;
 import java.time.Duration;
 import org.example.camunda.process.solution.facade.ProcessController;
 import org.example.camunda.process.solution.service.MyService;
-import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 /**
  * @see
  *     https://docs.camunda.io/docs/components/best-practices/development/testing-process-definitions/#writing-process-tests-in-java
  */
-@SpringBootTest(classes = ProcessApplication.class) // will deploy BPMN & DMN models
-@ZeebeSpringTest
+// @SpringBootTest(classes = ProcessApplication.class) // will deploy BPMN & DMN models
+// @ZeebeSpringTest
 public class ProcessUnitTest {
 
   @Autowired private ProcessController processController;
@@ -33,7 +30,7 @@ public class ProcessUnitTest {
 
   @MockBean private MyService myService;
 
-  @Test
+  // @Test
   public void testHappyPath() throws Exception {
     // define mock behavior
     when(myService.myOperation(anyString())).thenReturn(true);
