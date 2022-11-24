@@ -9,7 +9,7 @@
       "label": "Postleitzahl",
       "type": "textfield",
       "id": "Field_1l7jr69",
-      "key": "Postleitzahl",
+      "key": "zipcode",
       "disabled": false,
       "validate": {
         "minLength": 5,
@@ -20,7 +20,7 @@
       "label": "Wohnfläche",
       "type": "number",
       "id": "Field_04f65bh",
-      "key": "Wohnflaeche",
+      "key": "wohnflaeche",
       "validate": {
         "min": 10,
         "max": 10000
@@ -36,7 +36,7 @@
       "label": "Baujahr",
       "type": "number",
       "id": "Field_1tqpwzq",
-      "key": "Baujahr",
+      "key": "baujahr",
       "validate": {
         "min": 1500,
         "max": 3000
@@ -68,7 +68,7 @@
       "label": "Stockwerke",
       "type": "select",
       "id": "Field_0mjjcb5",
-      "key": "Stockwerke"
+      "key": "stockwerke"
     },
     {
       "values": [
@@ -96,14 +96,7 @@
       "label": "Zustand",
       "type": "select",
       "id": "Field_0nt27er",
-      "key": "Zustand"
-    },
-    {
-      "action": "submit",
-      "label": "Weiter",
-      "type": "button",
-      "id": "Field_0x797e5",
-      "key": "field_1s29xh9"
+      "key": "zustand"
     },
     {
       "action": "reset",
@@ -119,7 +112,7 @@
   "executionPlatformVersion": "8.1.0",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.5.0"
+    "version": "5.5.1"
   },
   "schemaVersion": 5
 }

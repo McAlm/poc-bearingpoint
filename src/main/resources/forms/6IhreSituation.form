@@ -8,7 +8,7 @@
     {
       "type": "number",
       "id": "Field_00kt3oe",
-      "key": "Einkommen_1",
+      "key": "einkommen_1",
       "validate": {
         "required": false,
         "min": 0
@@ -30,14 +30,14 @@
       ],
       "type": "radio",
       "id": "Field_08ikzvy",
-      "key": "IstWeitereEinkommen",
+      "key": "istWeitereEinkommen",
       "label": "Existieren weitere Einkommen?",
       "defaultValue": "value2"
     },
     {
       "type": "number",
       "id": "Field_0w4se2p",
-      "key": "Einkommen_2",
+      "key": "einkommen_2",
       "description": "Bitte erfassen Sie Ihr Jahresgehalt in vollen Euro"
     },
     {
@@ -49,7 +49,7 @@
       "label": "Wieviele Personen leben im Haushalt?",
       "type": "number",
       "id": "Field_0c70lck",
-      "key": "PersonenHaushalt",
+      "key": "personenImHaushalt",
       "validate": {
         "max": 20,
         "min": 1
@@ -59,7 +59,7 @@
       "label": "Davon Kinder: ",
       "type": "number",
       "id": "Field_17oytop",
-      "key": "Kinder",
+      "key": "kinder",
       "validate": {
         "min": 0,
         "max": 20
@@ -69,7 +69,7 @@
       "label": "KFZ im Haushalt: ",
       "type": "number",
       "id": "Field_0h1co1u",
-      "key": "KFZ",
+      "key": "kfz",
       "validate": {
         "min": 0,
         "max": 20
@@ -93,13 +93,13 @@
       ],
       "type": "radio",
       "id": "Field_0d5tjoe",
-      "key": "IstBesondereAusgaben",
+      "key": "istBesondereAusgaben",
       "defaultValue": "value2"
     },
     {
       "type": "number",
       "id": "Field_0wzab53",
-      "key": "BesondereAusgaben",
+      "key": "besondereAusgaben",
       "description": "Bitte erfassen Se die Höhe der besonderen Ausgaben in vollen Euro",
       "defaultValue": 0,
       "validate": {
@@ -107,6 +107,7 @@
       }
     },
     {
+      "text": "# Text",
       "type": "text",
       "id": "Field_12e5q8b"
     },
@@ -114,13 +115,6 @@
       "text": "*Ihr Haushaltsüberschuss beträgt: BETRAG*",
       "type": "text",
       "id": "Field_0tmy5lz"
-    },
-    {
-      "action": "submit",
-      "label": "Weiter",
-      "type": "button",
-      "id": "Field_1cc6gp4",
-      "key": "field_1qzwmm3"
     },
     {
       "action": "reset",
@@ -136,7 +130,7 @@
   "executionPlatformVersion": "8.1.0",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.5.0"
+    "version": "5.5.1"
   },
   "schemaVersion": 5
 }

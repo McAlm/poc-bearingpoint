@@ -9,7 +9,7 @@
       "label": "Vorname",
       "type": "textfield",
       "id": "Field_0keciii",
-      "key": "vorname"
+      "key": "firstname"
     },
     {
       "label": "Nachname",
@@ -21,7 +21,7 @@
       "label": "Postleitzahl",
       "type": "textfield",
       "id": "Field_0p18sjx",
-      "key": "zipCode"
+      "key": "zipcode"
     },
     {
       "label": "Straße",

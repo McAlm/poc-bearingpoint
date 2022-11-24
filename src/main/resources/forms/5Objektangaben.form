@@ -9,13 +9,13 @@
       "label": "Wie hoch ist der Kaufpreis der Immobilie?",
       "type": "number",
       "id": "Field_1tnhwgp",
-      "key": "Kaufpreis"
+      "key": "kaufpreis"
     },
     {
       "label": "Wieviel Eigenkapital soll eingesetzt werden?",
       "type": "number",
       "id": "Field_0x79r57",
-      "key": "Eigenkapital"
+      "key": "eigenkapital"
     },
     {
       "values": [
@@ -31,14 +31,14 @@
       "label": "Besteht zusätzlicher Finanzierungsbedarf?",
       "type": "radio",
       "id": "Field_15nmpap",
-      "key": "IstZusaetzlicherFinanzierungsbedarf",
+      "key": "istZusaetzlicherFinanzierungsbedarf",
       "defaultValue": "value2"
     },
     {
       "label": "Wenn ja, wie viel?",
       "type": "number",
       "id": "Field_0dfo2c3",
-      "key": "ZusaetzlicherFinanzierungsbedarf",
+      "key": "zusaetzlicherFinanzierungsbedarf",
       "properties": {}
     },
     {
@@ -55,20 +55,13 @@
       "label": "Muss ein Makler bezahlt werden?",
       "type": "radio",
       "id": "Field_15imklr",
-      "key": "Makler",
+      "key": "makler",
       "defaultValue": "value"
     },
     {
       "text": "*Ihr Finanzierungsbedarf beträgt BETRAG*",
       "type": "text",
       "id": "Field_153zrg4"
-    },
-    {
-      "action": "submit",
-      "label": "Weiter",
-      "type": "button",
-      "id": "Field_1f4pw55",
-      "key": "field_1dtey0p"
     },
     {
       "action": "reset",
@@ -84,7 +77,7 @@
   "executionPlatformVersion": "8.1.0",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.5.0"
+    "version": "5.5.1"
   },
   "schemaVersion": 5
 }

@@ -18,14 +18,25 @@
       ],
       "type": "radio",
       "id": "Field_1gayrqm",
-      "key": "Wunsch"
+      "key": "wunsch"
     },
     {
-      "action": "submit",
-      "label": "Weiter",
-      "type": "button",
-      "id": "Field_0614gxf",
-      "key": "field_0kuefiq"
+      "label": "Wunschrate",
+      "type": "textfield",
+      "id": "Field_17452jv",
+      "key": "wunschrate"
+    },
+    {
+      "label": "Wunschlaufzeit",
+      "type": "number",
+      "id": "Field_01eczdu",
+      "key": "wunschlaufzeit"
+    },
+    {
+      "label": "Bitte wählen Sie die gewünschte Zinsbindung:",
+      "type": "textfield",
+      "id": "Field_0jnjyy5",
+      "key": "zinsbindung"
     },
     {
       "action": "reset",
@@ -41,7 +52,7 @@
   "executionPlatformVersion": "8.1.0",
   "exporter": {
     "name": "Camunda Modeler",
-    "version": "5.5.0"
+    "version": "5.5.1"
   },
   "schemaVersion": 5
 }

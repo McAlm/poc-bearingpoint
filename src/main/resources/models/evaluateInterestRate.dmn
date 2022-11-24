@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1e6h6nm" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="evaluateInterestRate" name="Evaluate Interest Rate">
+    <decisionTable id="DecisionTable_122eig0" hitPolicy="FIRST">
+      <input id="Input_1" label="Einkommen">
+        <inputExpression id="InputExpression_1" typeRef="number">
+          <text>einkommen_1 + einkommen_2</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1j9mqzb" label="Zinsbindung">
+        <inputExpression id="LiteralExpression_0um7uz9" typeRef="number">
+          <text>zinsbindung</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Zinsrate" name="interestRate" typeRef="number" />
+      <rule id="DecisionRule_1j0cdnc">
+        <inputEntry id="UnaryTests_1q4uwhn">
+          <text>&lt; 100000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wz8nrk">
+          <text>5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l9akjw">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u01gct">
+        <inputEntry id="UnaryTests_038trt6">
+          <text>&lt; 100000</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t9624y">
+          <text>10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tp9r5n">
+          <text>4</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jonawj">
+        <inputEntry id="UnaryTests_1mehwcx">
+          <text>[100000..500000]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uk5wi6">
+          <text>5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xvkhhw">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xjufos">
+        <inputEntry id="UnaryTests_1f26ez9">
+          <text>[100000..500000]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j3dc3m">
+          <text>10</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02fc0dc">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0demfk3">
+        <inputEntry id="UnaryTests_1oq05ml">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zo4p6k">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v7hfny">
+          <text>8</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="evaluateInterestRate">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
