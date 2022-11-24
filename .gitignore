@@ -32,3 +32,4 @@ out/
 .vscode/
 workspace.code-workspace
 src/main/resources/.DS_Store
+.DS_Store
