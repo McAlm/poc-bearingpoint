@@ -1,0 +1,52 @@
+{
+  "components": [
+    {
+      "text": "# Was wollen Sie kaufen?",
+      "type": "text",
+      "id": "Field_1dy7i5v"
+    },
+    {
+      "values": [
+        {
+          "label": "Einfamilienhaus",
+          "value": "Einfamilienhaus"
+        },
+        {
+          "label": "Eigentumswohnung",
+          "value": "Eigentumswohnung"
+        },
+        {
+          "label": "Andere",
+          "value": "Andere"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_1p2ggs5",
+      "key": "Kaufgegenstand",
+      "label": "Kaufgegenstand"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0igd50f",
+      "key": "field_08iaitz"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_0pokmhf",
+      "key": "field_0p3fkkt"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0jei1x1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}

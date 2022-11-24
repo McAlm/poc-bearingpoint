@@ -14,8 +14,7 @@ public class MyWorker {
 
   private static final Logger LOG = LoggerFactory.getLogger(MyWorker.class);
 
-  @Autowired
-  private MyService myService;
+  @Autowired private MyService myService;
 
   @JobWorker
   public ProcessVariables invokeMyService(@VariablesAsType ProcessVariables variables) {

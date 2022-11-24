@@ -23,16 +23,33 @@ public class Customer {
   private String lastName;
 
   @Column(name = "birthdate")
-  private LocalDate birthdate;
+  private String birthdate;
 
-  public Customer(String firstName, String lastName, LocalDate birthdate) {
+  @Column(name = "zipcode")
+  private String zipcode;
+
+  @Column(name = "city")
+  private String city;
+
+  @Column(name = "street")
+  private String street;
+
+  @Column(name = "email")
+  private String email;
+
+
+  public Customer(String firstName, String lastName, String birthdate, String zipcode, String city, String street,
+      String email) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.birthdate = birthdate;
+    this.zipcode = zipcode;
+    this.city = city;
+    this.street = street;
+    this.email = email;
   }
 
-  public Customer() {
-  }
+  public Customer() {}
 
   public Long getId() {
     return id;
@@ -58,11 +75,11 @@ public class Customer {
     this.lastName = lastName;
   }
 
-  public LocalDate getBirthdate() {
+  public String getBirthdate() {
     return birthdate;
   }
 
-  public void setBirthdate(LocalDate birthdate) {
+  public void setBirthdate(String birthdate) {
     this.birthdate = birthdate;
   }
 
@@ -77,5 +94,37 @@ public class Customer {
         + ", birthdate="
         + birthdate
         + "]";
+  }
+
+  public String getZipcode() {
+    return zipcode;
+  }
+
+  public void setZipcode(String zipcode) {
+    this.zipcode = zipcode;
+  }
+
+  public String getCity() {
+    return city;
+  }
+
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  public String getStreet() {
+    return street;
+  }
+
+  public void setStreet(String street) {
+    this.street = street;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
   }
 }

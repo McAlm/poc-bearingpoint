@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1b5yl2q" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.5.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <bpmn:process id="DigitaleBaufinanzierung" name="Digitale Baufinanzierung" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_1c02c6d">{
+  "components": [
+    {
+      "text": "# Was haben Sie vor?",
+      "type": "text",
+      "id": "Field_1dy7i5v"
+    },
+    {
+      "values": [
+        {
+          "label": "Kaufen",
+          "value": "Kaufen"
+        },
+        {
+          "label": "Sanieren",
+          "value": "Sanieren"
+        },
+        {
+          "label": "Neubau",
+          "value": "Neubau"
+        },
+        {
+          "label": "Finanzieren",
+          "value": "Finanzieren"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_1p2ggs5",
+      "key": "Finanzierungsvorhaben",
+      "validate": {
+        "required": false
+      },
+      "label": "Finanzierungsvorhaben"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0igd50f",
+      "key": "field_08iaitz"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_0pokmhf",
+      "key": "field_0p3fkkt"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0jei1x1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_06nh6v3">{
+  "components": [
+    {
+      "text": "# Was wollen Sie kaufen?",
+      "type": "text",
+      "id": "Field_1dy7i5v"
+    },
+    {
+      "values": [
+        {
+          "label": "Einfamilienhaus",
+          "value": "Einfamilienhaus"
+        },
+        {
+          "label": "Eigentumswohnung",
+          "value": "Eigentumswohnung"
+        },
+        {
+          "label": "Andere",
+          "value": "Andere"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_1p2ggs5",
+      "key": "Kaufgegenstand",
+      "label": "Kaufgegenstand"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0igd50f",
+      "key": "field_08iaitz"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_0pokmhf",
+      "key": "field_0p3fkkt"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0jei1x1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2dc52l3">{
+  "components": [
+    {
+      "text": "# Erzählen Sie uns etwas zu Ihrem Wunschobjekt!",
+      "type": "text",
+      "id": "Field_0gav6u1"
+    },
+    {
+      "label": "Postleitzahl",
+      "type": "textfield",
+      "id": "Field_1l7jr69",
+      "key": "Postleitzahl",
+      "disabled": false,
+      "validate": {
+        "minLength": 5,
+        "maxLength": 5
+      }
+    },
+    {
+      "label": "Wohnfläche",
+      "type": "number",
+      "id": "Field_04f65bh",
+      "key": "Wohnflaeche",
+      "validate": {
+        "min": 10,
+        "max": 10000
+      }
+    },
+    {
+      "label": "Grundstücksfläche",
+      "type": "number",
+      "id": "Field_05nqmll",
+      "key": "Grundstuecksflaeche"
+    },
+    {
+      "label": "Baujahr",
+      "type": "number",
+      "id": "Field_1tqpwzq",
+      "key": "Baujahr",
+      "validate": {
+        "min": 1500,
+        "max": 3000
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "1",
+          "value": "value"
+        },
+        {
+          "label": "2",
+          "value": "value2"
+        },
+        {
+          "label": "3",
+          "value": "value3"
+        },
+        {
+          "label": "4",
+          "value": "value4"
+        },
+        {
+          "label": "5 oder mehr",
+          "value": "value5"
+        }
+      ],
+      "label": "Stockwerke",
+      "type": "select",
+      "id": "Field_0mjjcb5",
+      "key": "Stockwerke"
+    },
+    {
+      "values": [
+        {
+          "label": "Schlecht",
+          "value": "value"
+        },
+        {
+          "label": "Eher schlecht",
+          "value": "value2"
+        },
+        {
+          "label": "Mittelmäßig",
+          "value": "value3"
+        },
+        {
+          "label": "Gut",
+          "value": "value4"
+        },
+        {
+          "label": "Sehr gut",
+          "value": "value5"
+        }
+      ],
+      "label": "Zustand",
+      "type": "select",
+      "id": "Field_0nt27er",
+      "key": "Zustand"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0x797e5",
+      "key": "field_1s29xh9"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_1wklyvv",
+      "key": "field_0jcsxt9"
+    }
+  ],
+  "type": "default",
+  "id": "Form_17pt9k6",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2ijdqr3">{
+  "components": [
+    {
+      "text": "# Wie groß ist Ihr Vorhaben?",
+      "type": "text",
+      "id": "Field_14d05pt"
+    },
+    {
+      "label": "Wie hoch ist der Kaufpreis der Immobilie?",
+      "type": "number",
+      "id": "Field_1tnhwgp",
+      "key": "Kaufpreis"
+    },
+    {
+      "label": "Wieviel Eigenkapital soll eingesetzt werden?",
+      "type": "number",
+      "id": "Field_0x79r57",
+      "key": "Eigenkapital"
+    },
+    {
+      "values": [
+        {
+          "label": "Ja",
+          "value": "value"
+        },
+        {
+          "label": "Nein",
+          "value": "value2"
+        }
+      ],
+      "label": "Besteht zusätzlicher Finanzierungsbedarf?",
+      "type": "radio",
+      "id": "Field_15nmpap",
+      "key": "IstZusaetzlicherFinanzierungsbedarf",
+      "defaultValue": "value2"
+    },
+    {
+      "label": "Wenn ja, wie viel?",
+      "type": "number",
+      "id": "Field_0dfo2c3",
+      "key": "ZusaetzlicherFinanzierungsbedarf",
+      "properties": {}
+    },
+    {
+      "values": [
+        {
+          "label": "Ja",
+          "value": "value"
+        },
+        {
+          "label": "Nein",
+          "value": "value2"
+        }
+      ],
+      "label": "Muss ein Makler bezahlt werden?",
+      "type": "radio",
+      "id": "Field_15imklr",
+      "key": "Makler",
+      "defaultValue": "value"
+    },
+    {
+      "text": "*Ihr Finanzierungsbedarf beträgt BETRAG*",
+      "type": "text",
+      "id": "Field_153zrg4"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_1f4pw55",
+      "key": "field_1dtey0p"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_0589b6i",
+      "key": "field_1n3u79j"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0wbf8nj",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_0o0j557">{
+  "components": [
+    {
+      "text": "# Wie sieht Ihr finanzieller Spielraum aus?",
+      "type": "text",
+      "id": "Field_1snvb3c"
+    },
+    {
+      "type": "number",
+      "id": "Field_00kt3oe",
+      "key": "Einkommen_1",
+      "validate": {
+        "required": false,
+        "min": 0
+      },
+      "properties": {},
+      "description": "Bitte erfassen Sie Ihr Jahresgehalt in vollen Euro",
+      "label": "Wie hoch ist ihr Gehalt?"
+    },
+    {
+      "values": [
+        {
+          "label": "ja",
+          "value": "value"
+        },
+        {
+          "label": "nein",
+          "value": "value2"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_08ikzvy",
+      "key": "IstWeitereEinkommen",
+      "label": "Existieren weitere Einkommen?",
+      "defaultValue": "value2"
+    },
+    {
+      "type": "number",
+      "id": "Field_0w4se2p",
+      "key": "Einkommen_2",
+      "description": "Bitte erfassen Sie Ihr Jahresgehalt in vollen Euro"
+    },
+    {
+      "text": "# &lt;h4&gt;Bitte machen Sie weitere Angaben zu den Personen im Haushalt&lt;/h4&gt; ",
+      "type": "text",
+      "id": "Field_0cwu5nx"
+    },
+    {
+      "label": "Wieviele Personen leben im Haushalt?",
+      "type": "number",
+      "id": "Field_0c70lck",
+      "key": "PersonenHaushalt",
+      "validate": {
+        "max": 20,
+        "min": 1
+      }
+    },
+    {
+      "label": "Davon Kinder: ",
+      "type": "number",
+      "id": "Field_17oytop",
+      "key": "Kinder",
+      "validate": {
+        "min": 0,
+        "max": 20
+      }
+    },
+    {
+      "label": "KFZ im Haushalt: ",
+      "type": "number",
+      "id": "Field_0h1co1u",
+      "key": "KFZ",
+      "validate": {
+        "min": 0,
+        "max": 20
+      }
+    },
+    {
+      "text": "# &lt;h4&gt;Bestehen besondere Ausgaben?&lt;/h4&gt; ",
+      "type": "text",
+      "id": "Field_19co6uf"
+    },
+    {
+      "values": [
+        {
+          "label": "ja",
+          "value": "value"
+        },
+        {
+          "label": "nein",
+          "value": "value2"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_0d5tjoe",
+      "key": "IstBesondereAusgaben",
+      "defaultValue": "value2"
+    },
+    {
+      "type": "number",
+      "id": "Field_0wzab53",
+      "key": "BesondereAusgaben",
+      "description": "Bitte erfassen Se die Höhe der besonderen Ausgaben in vollen Euro",
+      "defaultValue": 0,
+      "validate": {
+        "min": 0
+      }
+    },
+    {
+      "type": "text",
+      "id": "Field_12e5q8b"
+    },
+    {
+      "text": "*Ihr Haushaltsüberschuss beträgt: BETRAG*",
+      "type": "text",
+      "id": "Field_0tmy5lz"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_1cc6gp4",
+      "key": "field_1qzwmm3"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_1szznxa",
+      "key": "field_16auq91"
+    }
+  ],
+  "type": "default",
+  "id": "Form_10qy5v1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2lnc804">{
+  "components": [
+    {
+      "text": "#Welche Berechnungsgrundlage dürfen wir nutzen?",
+      "type": "text",
+      "id": "Field_1c20wk2"
+    },
+    {
+      "values": [
+        {
+          "label": "Ich habe eine Wunschlaufzeit",
+          "value": "value"
+        },
+        {
+          "label": "Ich habe eine Wunschrate",
+          "value": "value2"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_1gayrqm",
+      "key": "Wunsch"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0614gxf",
+      "key": "field_0kuefiq"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_049oo15",
+      "key": "field_0kml3m1"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1nlq9to",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_33baq3t">{
+  "components": [
+    {
+      "text": "# &lt;h4&gt;Wie hoch ist Ihre Wunschrate?",
+      "type": "text",
+      "id": "Field_0av3uar"
+    },
+    {
+      "type": "number",
+      "id": "Field_0qpouzr",
+      "key": "Wunschrate",
+      "description": "Bitte erfassen Sie ihre Wunschrate in vollen Euro"
+    },
+    {
+      "text": "# &lt;h4&gt;Mit welcher Zinsbindung planen Sie?",
+      "type": "text",
+      "id": "Field_0c555ru"
+    },
+    {
+      "values": [
+        {
+          "label": "5 Jahre",
+          "value": "value"
+        },
+        {
+          "label": "10 Jahre",
+          "value": "value2"
+        },
+        {
+          "label": "15 Jahre",
+          "value": "value3"
+        },
+        {
+          "label": "20 Jahre",
+          "value": "value4"
+        }
+      ],
+      "type": "select",
+      "id": "Field_0p5qsc7",
+      "key": "Zinsbindung",
+      "description": "Bitte wählen sie Ihre Zinsbindung"
+    },
+    {
+      "text": "# Ihre Finanzierungsdaten:",
+      "type": "text",
+      "id": "Field_0tfmlwn"
+    },
+    {
+      "label": "Kreditrate:",
+      "type": "textfield",
+      "id": "Field_08ggz7k",
+      "key": "Kreditrate"
+    },
+    {
+      "label": "Zinsbindung:",
+      "type": "textfield",
+      "id": "Field_125bris",
+      "key": "ZielZinsbindung"
+    },
+    {
+      "label": "Restschuld nach Ablauf der Zinsbindung: ",
+      "type": "textfield",
+      "id": "Field_1xwbo4f",
+      "key": "Restschuld"
+    },
+    {
+      "label": "Finanzierungsende:",
+      "type": "textfield",
+      "id": "Field_0ry1e94",
+      "key": "Finanzierungsende"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0ctpdm1",
+      "key": "field_04001pw"
+    },
+    {
+      "action": "submit",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_1verkxa",
+      "key": "field_0w3jjmh"
+    },
+    {
+      "text": "# &lt;Br&gt;",
+      "type": "text",
+      "id": "Field_0ffno2i"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0a05601",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_2n6ohnd">{
+  "components": [
+    {
+      "text": "# &lt;h4&gt; Hallo NAME1, Hallo NAME2\nHerzlich wilkommen zu Ihrem Online Baufinanzierungsberater.\n\nWir haben alle Daten hier hinterlegt. Sie können sofort loslegen.",
+      "type": "text",
+      "id": "Field_1dy7i5v"
+    },
+    {
+      "label": "Vorname",
+      "type": "textfield",
+      "id": "Field_0keciii",
+      "key": "firstname"
+    },
+    {
+      "label": "Nachname",
+      "type": "textfield",
+      "id": "Field_0bnwb0v",
+      "key": "lastname"
+    },
+    {
+      "label": "Postleitzahl",
+      "type": "textfield",
+      "id": "Field_0p18sjx",
+      "key": "zipcode"
+    },
+    {
+      "label": "Straße",
+      "type": "textfield",
+      "id": "Field_03umydt",
+      "key": "street"
+    },
+    {
+      "label": "Ort",
+      "type": "textfield",
+      "id": "Field_0mreqmi",
+      "key": "city"
+    },
+    {
+      "label": "Emailadresse",
+      "type": "textfield",
+      "id": "Field_094cgw5",
+      "key": "emailAdress",
+      "disabled": true,
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "personalDataForm",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.1"
+  },
+  "schemaVersion": 5
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1" name="Kunde startet Prozess per OnlineBanking mit seiner Emailadresse">
+      <bpmn:outgoing>Flow_05cik8p</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="GUI_PersoenlicheAngaben" name="Persönliche Angaben">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2n6ohnd" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1m3578k</bpmn:incoming>
+      <bpmn:outgoing>Flow_09p5225</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="GUI_ProjektAngaben" name="Projekt Angaben">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_1c02c6d" />
+        <zeebe:taskHeaders>
+          <zeebe:header key="Test123" value="Test123" />
+        </zeebe:taskHeaders>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0oea0gx</bpmn:incoming>
+      <bpmn:incoming>Flow_1dc7zkm</bpmn:incoming>
+      <bpmn:outgoing>Flow_1l5i3ho</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="GUI_Projektinformationen" name="Projektinformationen">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_06nh6v3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_07zo8o7</bpmn:incoming>
+      <bpmn:outgoing>Flow_0f50443</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0g1xg71" name="Objektangaben">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2ijdqr3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_13p9q1h</bpmn:incoming>
+      <bpmn:outgoing>Flow_1wx17kk</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_04ryk1h" name="Finanzierungswunsch">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2dc52l3" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0jmzbdt</bpmn:incoming>
+      <bpmn:outgoing>Flow_13p9q1h</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1ev0lg0" name="Ihre Situation">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_0o0j557" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1wx17kk</bpmn:incoming>
+      <bpmn:outgoing>Flow_0mukkeo</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_03gh8up" name="Finanzierungsdaten">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_33baq3t" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_08cxdgx</bpmn:incoming>
+      <bpmn:outgoing>Flow_05behd2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0narp7x">
+      <bpmn:incoming>Flow_038ex0f</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1l5i3ho" sourceRef="GUI_ProjektAngaben" targetRef="Gateway_1tec7en" />
+    <bpmn:sequenceFlow id="Flow_13p9q1h" sourceRef="Activity_04ryk1h" targetRef="Activity_0g1xg71" />
+    <bpmn:sequenceFlow id="Flow_1wx17kk" sourceRef="Activity_0g1xg71" targetRef="Activity_1ev0lg0" />
+    <bpmn:sequenceFlow id="Flow_05behd2" sourceRef="Activity_03gh8up" targetRef="Activity_0hnr2c5" />
+    <bpmn:sequenceFlow id="Flow_0mukkeo" sourceRef="Activity_1ev0lg0" targetRef="Activity_1qfrc07" />
+    <bpmn:userTask id="Activity_11rc25e" name="Interner  Ratingaufruf" />
+    <bpmn:userTask id="Activity_0oizj3n" name="Zinsentscheidung" />
+    <bpmn:userTask id="Activity_0ptlvck" name="Angebots erstellung" />
+    <bpmn:userTask id="Activity_0erwyi5" name="Angebot wird in Postfach bereitgestellt" />
+    <bpmn:userTask id="Activity_03xrfe8" name="Kundendaten aus Bestandssystem laden" />
+    <bpmn:sequenceFlow id="Flow_0f50443" sourceRef="GUI_Projektinformationen" targetRef="Gateway_0dcofxh" />
+    <bpmn:exclusiveGateway id="Gateway_1tec7en" default="Flow_0pnq8xf">
+      <bpmn:incoming>Flow_1l5i3ho</bpmn:incoming>
+      <bpmn:outgoing>Flow_07zo8o7</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0pnq8xf</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_07zo8o7" name="Kaufen" sourceRef="Gateway_1tec7en" targetRef="GUI_Projektinformationen">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=Finanzierungsvorhaben = "Kaufen"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="Event_1afzzmg">
+      <bpmn:incoming>Flow_0pnq8xf</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0pnq8xf" sourceRef="Gateway_1tec7en" targetRef="Event_1afzzmg" />
+    <bpmn:sequenceFlow id="Flow_09p5225" sourceRef="GUI_PersoenlicheAngaben" targetRef="Activity_1jwmrx3" />
+    <bpmn:sequenceFlow id="Flow_05cik8p" sourceRef="StartEvent_1" targetRef="Activity_1rjc7m4" />
+    <bpmn:exclusiveGateway id="Gateway_0dcofxh" default="Flow_084b8qe">
+      <bpmn:incoming>Flow_0f50443</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jmzbdt</bpmn:outgoing>
+      <bpmn:outgoing>Flow_084b8qe</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0jmzbdt" name="Einfamilienhaus" sourceRef="Gateway_0dcofxh" targetRef="Activity_04ryk1h">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=Kaufgegenstand = "Einfamilienhaus"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:endEvent id="Event_0rh77rj">
+      <bpmn:incoming>Flow_084b8qe</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_084b8qe" sourceRef="Gateway_0dcofxh" targetRef="Event_0rh77rj" />
+    <bpmn:sequenceFlow id="Flow_08cxdgx" sourceRef="Activity_1qfrc07" targetRef="Activity_03gh8up" />
+    <bpmn:userTask id="Activity_1qfrc07" name="Berechnungsgrundlage">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2lnc804" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0mukkeo</bpmn:incoming>
+      <bpmn:outgoing>Flow_08cxdgx</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1p85p7t" sourceRef="Activity_1rjc7m4" targetRef="Gateway_08be92t" />
+    <bpmn:exclusiveGateway id="Gateway_08be92t" name="Customer found" default="Flow_1m3578k">
+      <bpmn:incoming>Flow_1p85p7t</bpmn:incoming>
+      <bpmn:outgoing>Flow_1m3578k</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0oea0gx</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1m3578k" name="no" sourceRef="Gateway_08be92t" targetRef="GUI_PersoenlicheAngaben" />
+    <bpmn:serviceTask id="Activity_1rjc7m4" name="Search customer">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="searchCustomer" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_05cik8p</bpmn:incoming>
+      <bpmn:outgoing>Flow_1p85p7t</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0oea0gx" name="yes" sourceRef="Gateway_08be92t" targetRef="GUI_ProjektAngaben">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=customerFound</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1dc7zkm" sourceRef="Activity_1jwmrx3" targetRef="GUI_ProjektAngaben" />
+    <bpmn:serviceTask id="Activity_1jwmrx3" name="Create Customer">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="createCustomer" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_09p5225</bpmn:incoming>
+      <bpmn:outgoing>Flow_1dc7zkm</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_038ex0f" sourceRef="Activity_0hnr2c5" targetRef="Event_0narp7x" />
+    <bpmn:serviceTask id="Activity_0hnr2c5" name="Finanzierungsdaten persistieren">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="persistMortgage" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_05behd2</bpmn:incoming>
+      <bpmn:outgoing>Flow_038ex0f</bpmn:outgoing>
+    </bpmn:serviceTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="DigitaleBaufinanzierung">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="182" y="172" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="156" y="215" width="90" height="66" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0a0u4ah_di" bpmnElement="GUI_PersoenlicheAngaben">
+        <dc:Bounds x="590" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1esidc7" bpmnElement="GUI_ProjektAngaben">
+        <dc:Bounds x="930" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0f64kni" bpmnElement="GUI_Projektinformationen">
+        <dc:Bounds x="1210" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0ly0kco" bpmnElement="Activity_0g1xg71">
+        <dc:Bounds x="1720" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_0mu6q9q" bpmnElement="Activity_04ryk1h">
+        <dc:Bounds x="1550" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1na3dug" bpmnElement="Activity_1ev0lg0">
+        <dc:Bounds x="1890" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1s8guao" bpmnElement="Activity_03gh8up">
+        <dc:Bounds x="2210" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0narp7x_di" bpmnElement="Event_0narp7x">
+        <dc:Bounds x="2502" y="172" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05k1nfd_di" bpmnElement="Activity_11rc25e">
+        <dc:Bounds x="2260" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ez3mfd_di" bpmnElement="Activity_0oizj3n">
+        <dc:Bounds x="2420" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xsivro_di" bpmnElement="Activity_0ptlvck">
+        <dc:Bounds x="2550" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19ixev8_di" bpmnElement="Activity_0erwyi5">
+        <dc:Bounds x="2710" y="620" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0zprrnj_di" bpmnElement="Activity_03xrfe8">
+        <dc:Bounds x="600" y="570" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1tec7en_di" bpmnElement="Gateway_1tec7en" isMarkerVisible="true">
+        <dc:Bounds x="1075" y="165" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1afzzmg_di" bpmnElement="Event_1afzzmg">
+        <dc:Bounds x="1082" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0dcofxh_di" bpmnElement="Gateway_0dcofxh" isMarkerVisible="true">
+        <dc:Bounds x="1385" y="165" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0rh77rj_di" bpmnElement="Event_0rh77rj">
+        <dc:Bounds x="1392" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_00s6se2_di" bpmnElement="Activity_1qfrc07">
+        <dc:Bounds x="2050" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_08be92t_di" bpmnElement="Gateway_08be92t" isMarkerVisible="true">
+        <dc:Bounds x="415" y="165" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="400" y="141" width="79" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1j20oqb_di" bpmnElement="Activity_1rjc7m4">
+        <dc:Bounds x="280" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_08d6syd_di" bpmnElement="Activity_1jwmrx3">
+        <dc:Bounds x="760" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_014w7hg_di" bpmnElement="Activity_0hnr2c5">
+        <dc:Bounds x="2360" y="150" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1l5i3ho_di" bpmnElement="Flow_1l5i3ho">
+        <di:waypoint x="1030" y="190" />
+        <di:waypoint x="1075" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13p9q1h_di" bpmnElement="Flow_13p9q1h">
+        <di:waypoint x="1650" y="190" />
+        <di:waypoint x="1720" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1wx17kk_di" bpmnElement="Flow_1wx17kk">
+        <di:waypoint x="1820" y="190" />
+        <di:waypoint x="1890" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05behd2_di" bpmnElement="Flow_05behd2">
+        <di:waypoint x="2310" y="190" />
+        <di:waypoint x="2360" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0mukkeo_di" bpmnElement="Flow_0mukkeo">
+        <di:waypoint x="1990" y="190" />
+        <di:waypoint x="2050" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f50443_di" bpmnElement="Flow_0f50443">
+        <di:waypoint x="1310" y="190" />
+        <di:waypoint x="1385" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_07zo8o7_di" bpmnElement="Flow_07zo8o7">
+        <di:waypoint x="1125" y="190" />
+        <di:waypoint x="1210" y="190" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1142" y="172" width="35" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pnq8xf_di" bpmnElement="Flow_0pnq8xf">
+        <di:waypoint x="1100" y="165" />
+        <di:waypoint x="1100" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_09p5225_di" bpmnElement="Flow_09p5225">
+        <di:waypoint x="690" y="190" />
+        <di:waypoint x="760" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05cik8p_di" bpmnElement="Flow_05cik8p">
+        <di:waypoint x="218" y="190" />
+        <di:waypoint x="280" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jmzbdt_di" bpmnElement="Flow_0jmzbdt">
+        <di:waypoint x="1435" y="190" />
+        <di:waypoint x="1550" y="190" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1454" y="172" width="78" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_084b8qe_di" bpmnElement="Flow_084b8qe">
+        <di:waypoint x="1410" y="165" />
+        <di:waypoint x="1410" y="118" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_08cxdgx_di" bpmnElement="Flow_08cxdgx">
+        <di:waypoint x="2150" y="190" />
+        <di:waypoint x="2210" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1p85p7t_di" bpmnElement="Flow_1p85p7t">
+        <di:waypoint x="380" y="190" />
+        <di:waypoint x="415" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1m3578k_di" bpmnElement="Flow_1m3578k">
+        <di:waypoint x="465" y="190" />
+        <di:waypoint x="590" y="190" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="489" y="172" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0oea0gx_di" bpmnElement="Flow_0oea0gx">
+        <di:waypoint x="440" y="215" />
+        <di:waypoint x="440" y="300" />
+        <di:waypoint x="980" y="300" />
+        <di:waypoint x="980" y="230" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="487" y="282" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1dc7zkm_di" bpmnElement="Flow_1dc7zkm">
+        <di:waypoint x="860" y="190" />
+        <di:waypoint x="930" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_038ex0f_di" bpmnElement="Flow_038ex0f">
+        <di:waypoint x="2460" y="190" />
+        <di:waypoint x="2502" y="190" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

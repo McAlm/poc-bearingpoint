@@ -1,0 +1,101 @@
+{
+  "components": [
+    {
+      "text": "# <h4>Wie hoch ist Ihre Wunschrate?",
+      "type": "text",
+      "id": "Field_0av3uar"
+    },
+    {
+      "type": "number",
+      "id": "Field_0qpouzr",
+      "key": "Wunschrate",
+      "description": "Bitte erfassen Sie ihre Wunschrate in vollen Euro"
+    },
+    {
+      "text": "# <h4>Mit welcher Zinsbindung planen Sie?",
+      "type": "text",
+      "id": "Field_0c555ru"
+    },
+    {
+      "values": [
+        {
+          "label": "5 Jahre",
+          "value": "value"
+        },
+        {
+          "label": "10 Jahre",
+          "value": "value2"
+        },
+        {
+          "label": "15 Jahre",
+          "value": "value3"
+        },
+        {
+          "label": "20 Jahre",
+          "value": "value4"
+        }
+      ],
+      "type": "select",
+      "id": "Field_0p5qsc7",
+      "key": "Zinsbindung",
+      "description": "Bitte wählen sie Ihre Zinsbindung"
+    },
+    {
+      "text": "# Ihre Finanzierungsdaten:",
+      "type": "text",
+      "id": "Field_0tfmlwn"
+    },
+    {
+      "label": "Kreditrate:",
+      "type": "textfield",
+      "id": "Field_08ggz7k",
+      "key": "Kreditrate"
+    },
+    {
+      "label": "Zinsbindung:",
+      "type": "textfield",
+      "id": "Field_125bris",
+      "key": "ZielZinsbindung"
+    },
+    {
+      "label": "Restschuld nach Ablauf der Zinsbindung: ",
+      "type": "textfield",
+      "id": "Field_1xwbo4f",
+      "key": "Restschuld"
+    },
+    {
+      "label": "Finanzierungsende:",
+      "type": "textfield",
+      "id": "Field_0ry1e94",
+      "key": "Finanzierungsende"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0ctpdm1",
+      "key": "field_04001pw"
+    },
+    {
+      "action": "submit",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_1verkxa",
+      "key": "field_0w3jjmh"
+    },
+    {
+      "text": "# <Br>",
+      "type": "text",
+      "id": "Field_0ffno2i"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0a05601",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}

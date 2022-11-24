@@ -1,6 +1,6 @@
 package org.example.camunda.process.solution.facade;
 
-import io.camunda.zeebe.client.ZeebeClient;
+import org.example.camunda.process.solution.Antragsdaten;
 import org.example.camunda.process.solution.ProcessConstants;
 import org.example.camunda.process.solution.ProcessVariables;
 import org.slf4j.Logger;
@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import io.camunda.zeebe.client.ZeebeClient;
 
 @RestController
 @RequestMapping("/process")
@@ -31,6 +33,22 @@ public class ProcessController {
     zeebe
         .newCreateInstanceCommand()
         .bpmnProcessId(ProcessConstants.BPMN_PROCESS_ID)
+        .latestVersion()
+        .variables(variables)
+        .send();
+  }
+
+
+
+  @PostMapping("/startMortgage")
+  public void startProcessInstanceForMortgage(@RequestBody Antragsdaten variables) {
+
+    LOG.info(
+        "Starting process `" + ProcessConstants.MORTGAGE_PROCESS_ID + "` with variables: " + variables);
+
+    zeebe
+        .newCreateInstanceCommand()
+        .bpmnProcessId(ProcessConstants.MORTGAGE_PROCESS_ID)
         .latestVersion()
         .variables(variables)
         .send();

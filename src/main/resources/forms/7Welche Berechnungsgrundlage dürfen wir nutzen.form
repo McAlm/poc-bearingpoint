@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "text": "#Welche Berechnungsgrundlage dürfen wir nutzen?",
+      "type": "text",
+      "id": "Field_1c20wk2"
+    },
+    {
+      "values": [
+        {
+          "label": "Ich habe eine Wunschlaufzeit",
+          "value": "value"
+        },
+        {
+          "label": "Ich habe eine Wunschrate",
+          "value": "value2"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_1gayrqm",
+      "key": "Wunsch"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0614gxf",
+      "key": "field_0kuefiq"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_049oo15",
+      "key": "field_0kml3m1"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1nlq9to",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}

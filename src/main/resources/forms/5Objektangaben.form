@@ -1,0 +1,90 @@
+{
+  "components": [
+    {
+      "text": "# Wie groß ist Ihr Vorhaben?",
+      "type": "text",
+      "id": "Field_14d05pt"
+    },
+    {
+      "label": "Wie hoch ist der Kaufpreis der Immobilie?",
+      "type": "number",
+      "id": "Field_1tnhwgp",
+      "key": "Kaufpreis"
+    },
+    {
+      "label": "Wieviel Eigenkapital soll eingesetzt werden?",
+      "type": "number",
+      "id": "Field_0x79r57",
+      "key": "Eigenkapital"
+    },
+    {
+      "values": [
+        {
+          "label": "Ja",
+          "value": "value"
+        },
+        {
+          "label": "Nein",
+          "value": "value2"
+        }
+      ],
+      "label": "Besteht zusätzlicher Finanzierungsbedarf?",
+      "type": "radio",
+      "id": "Field_15nmpap",
+      "key": "IstZusaetzlicherFinanzierungsbedarf",
+      "defaultValue": "value2"
+    },
+    {
+      "label": "Wenn ja, wie viel?",
+      "type": "number",
+      "id": "Field_0dfo2c3",
+      "key": "ZusaetzlicherFinanzierungsbedarf",
+      "properties": {}
+    },
+    {
+      "values": [
+        {
+          "label": "Ja",
+          "value": "value"
+        },
+        {
+          "label": "Nein",
+          "value": "value2"
+        }
+      ],
+      "label": "Muss ein Makler bezahlt werden?",
+      "type": "radio",
+      "id": "Field_15imklr",
+      "key": "Makler",
+      "defaultValue": "value"
+    },
+    {
+      "text": "*Ihr Finanzierungsbedarf beträgt BETRAG*",
+      "type": "text",
+      "id": "Field_153zrg4"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_1f4pw55",
+      "key": "field_1dtey0p"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_0589b6i",
+      "key": "field_1n3u79j"
+    }
+  ],
+  "type": "default",
+  "id": "Form_0wbf8nj",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}

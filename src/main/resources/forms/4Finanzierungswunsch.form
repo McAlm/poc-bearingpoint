@@ -1,0 +1,125 @@
+{
+  "components": [
+    {
+      "text": "# Erzählen Sie uns etwas zu Ihrem Wunschobjekt!",
+      "type": "text",
+      "id": "Field_0gav6u1"
+    },
+    {
+      "label": "Postleitzahl",
+      "type": "textfield",
+      "id": "Field_1l7jr69",
+      "key": "Postleitzahl",
+      "disabled": false,
+      "validate": {
+        "minLength": 5,
+        "maxLength": 5
+      }
+    },
+    {
+      "label": "Wohnfläche",
+      "type": "number",
+      "id": "Field_04f65bh",
+      "key": "Wohnflaeche",
+      "validate": {
+        "min": 10,
+        "max": 10000
+      }
+    },
+    {
+      "label": "Grundstücksfläche",
+      "type": "number",
+      "id": "Field_05nqmll",
+      "key": "Grundstuecksflaeche"
+    },
+    {
+      "label": "Baujahr",
+      "type": "number",
+      "id": "Field_1tqpwzq",
+      "key": "Baujahr",
+      "validate": {
+        "min": 1500,
+        "max": 3000
+      }
+    },
+    {
+      "values": [
+        {
+          "label": "1",
+          "value": "value"
+        },
+        {
+          "label": "2",
+          "value": "value2"
+        },
+        {
+          "label": "3",
+          "value": "value3"
+        },
+        {
+          "label": "4",
+          "value": "value4"
+        },
+        {
+          "label": "5 oder mehr",
+          "value": "value5"
+        }
+      ],
+      "label": "Stockwerke",
+      "type": "select",
+      "id": "Field_0mjjcb5",
+      "key": "Stockwerke"
+    },
+    {
+      "values": [
+        {
+          "label": "Schlecht",
+          "value": "value"
+        },
+        {
+          "label": "Eher schlecht",
+          "value": "value2"
+        },
+        {
+          "label": "Mittelmäßig",
+          "value": "value3"
+        },
+        {
+          "label": "Gut",
+          "value": "value4"
+        },
+        {
+          "label": "Sehr gut",
+          "value": "value5"
+        }
+      ],
+      "label": "Zustand",
+      "type": "select",
+      "id": "Field_0nt27er",
+      "key": "Zustand"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_0x797e5",
+      "key": "field_1s29xh9"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_1wklyvv",
+      "key": "field_0jcsxt9"
+    }
+  ],
+  "type": "default",
+  "id": "Form_17pt9k6",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}

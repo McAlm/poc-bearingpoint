@@ -1,0 +1,142 @@
+{
+  "components": [
+    {
+      "text": "# Wie sieht Ihr finanzieller Spielraum aus?",
+      "type": "text",
+      "id": "Field_1snvb3c"
+    },
+    {
+      "type": "number",
+      "id": "Field_00kt3oe",
+      "key": "Einkommen_1",
+      "validate": {
+        "required": false,
+        "min": 0
+      },
+      "properties": {},
+      "description": "Bitte erfassen Sie Ihr Jahresgehalt in vollen Euro",
+      "label": "Wie hoch ist ihr Gehalt?"
+    },
+    {
+      "values": [
+        {
+          "label": "ja",
+          "value": "value"
+        },
+        {
+          "label": "nein",
+          "value": "value2"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_08ikzvy",
+      "key": "IstWeitereEinkommen",
+      "label": "Existieren weitere Einkommen?",
+      "defaultValue": "value2"
+    },
+    {
+      "type": "number",
+      "id": "Field_0w4se2p",
+      "key": "Einkommen_2",
+      "description": "Bitte erfassen Sie Ihr Jahresgehalt in vollen Euro"
+    },
+    {
+      "text": "# <h4>Bitte machen Sie weitere Angaben zu den Personen im Haushalt</h4> ",
+      "type": "text",
+      "id": "Field_0cwu5nx"
+    },
+    {
+      "label": "Wieviele Personen leben im Haushalt?",
+      "type": "number",
+      "id": "Field_0c70lck",
+      "key": "PersonenHaushalt",
+      "validate": {
+        "max": 20,
+        "min": 1
+      }
+    },
+    {
+      "label": "Davon Kinder: ",
+      "type": "number",
+      "id": "Field_17oytop",
+      "key": "Kinder",
+      "validate": {
+        "min": 0,
+        "max": 20
+      }
+    },
+    {
+      "label": "KFZ im Haushalt: ",
+      "type": "number",
+      "id": "Field_0h1co1u",
+      "key": "KFZ",
+      "validate": {
+        "min": 0,
+        "max": 20
+      }
+    },
+    {
+      "text": "# <h4>Bestehen besondere Ausgaben?</h4> ",
+      "type": "text",
+      "id": "Field_19co6uf"
+    },
+    {
+      "values": [
+        {
+          "label": "ja",
+          "value": "value"
+        },
+        {
+          "label": "nein",
+          "value": "value2"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_0d5tjoe",
+      "key": "IstBesondereAusgaben",
+      "defaultValue": "value2"
+    },
+    {
+      "type": "number",
+      "id": "Field_0wzab53",
+      "key": "BesondereAusgaben",
+      "description": "Bitte erfassen Se die Höhe der besonderen Ausgaben in vollen Euro",
+      "defaultValue": 0,
+      "validate": {
+        "min": 0
+      }
+    },
+    {
+      "type": "text",
+      "id": "Field_12e5q8b"
+    },
+    {
+      "text": "*Ihr Haushaltsüberschuss beträgt: BETRAG*",
+      "type": "text",
+      "id": "Field_0tmy5lz"
+    },
+    {
+      "action": "submit",
+      "label": "Weiter",
+      "type": "button",
+      "id": "Field_1cc6gp4",
+      "key": "field_1qzwmm3"
+    },
+    {
+      "action": "reset",
+      "label": "Zurücksetzen",
+      "type": "button",
+      "id": "Field_1szznxa",
+      "key": "field_16auq91"
+    }
+  ],
+  "type": "default",
+  "id": "Form_10qy5v1",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.0"
+  },
+  "schemaVersion": 5
+}

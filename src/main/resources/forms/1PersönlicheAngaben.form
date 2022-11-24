@@ -1,0 +1,58 @@
+{
+  "components": [
+    {
+      "text": "# <h4> Hallo NAME1, Hallo NAME2\nHerzlich wilkommen zu Ihrem Online Baufinanzierungsberater.\n\nWir haben alle Daten hier hinterlegt. Sie können sofort loslegen.",
+      "type": "text",
+      "id": "Field_1dy7i5v"
+    },
+    {
+      "label": "Vorname",
+      "type": "textfield",
+      "id": "Field_0keciii",
+      "key": "vorname"
+    },
+    {
+      "label": "Nachname",
+      "type": "textfield",
+      "id": "Field_0bnwb0v",
+      "key": "lastname"
+    },
+    {
+      "label": "Postleitzahl",
+      "type": "textfield",
+      "id": "Field_0p18sjx",
+      "key": "zipCode"
+    },
+    {
+      "label": "Straße",
+      "type": "textfield",
+      "id": "Field_03umydt",
+      "key": "street"
+    },
+    {
+      "label": "Ort",
+      "type": "textfield",
+      "id": "Field_0mreqmi",
+      "key": "city"
+    },
+    {
+      "label": "Emailadresse",
+      "type": "textfield",
+      "id": "Field_094cgw5",
+      "key": "emailAdress",
+      "disabled": true,
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "personalDataForm",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.5.1"
+  },
+  "schemaVersion": 5
+}
