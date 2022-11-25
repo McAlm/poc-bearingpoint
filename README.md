@@ -35,7 +35,9 @@ or have a look at our
     in VisualCode (im Terminal): 
     mvn clean install
     ProcessApplication ==> Run
-    spring-boot:run
+
+    oder:
+    mvn spring-boot:run
 
 ### Start a process instance (via Postman)
    POST http://localhost:8080/process/startMortgage
