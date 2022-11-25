@@ -10,7 +10,6 @@ import io.camunda.zeebe.process.test.api.ZeebeTestEngine;
 import io.camunda.zeebe.process.test.inspections.InspectionUtility;
 import io.camunda.zeebe.process.test.inspections.model.InspectedProcessInstance;
 import java.time.Duration;
-
 import org.example.camunda.process.solution.dto.ProcessVariables;
 import org.example.camunda.process.solution.facade.ProcessController;
 import org.example.camunda.process.solution.service.MyService;

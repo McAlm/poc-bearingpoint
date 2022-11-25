@@ -1,6 +1,5 @@
 package org.example.camunda.process.solution.entity;
 
-import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -37,8 +36,13 @@ public class Customer {
   @Column(name = "email")
   private String email;
 
-
-  public Customer(String firstName, String lastName, String birthdate, String zipcode, String city, String street,
+  public Customer(
+      String firstName,
+      String lastName,
+      String birthdate,
+      String zipcode,
+      String city,
+      String street,
       String email) {
     this.firstName = firstName;
     this.lastName = lastName;
