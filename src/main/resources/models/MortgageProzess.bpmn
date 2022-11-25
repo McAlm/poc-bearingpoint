@@ -519,7 +519,7 @@
       "label": "Kreditrate:",
       "type": "textfield",
       "id": "Field_08ggz7k",
-      "key": "kreditrate"
+      "key": "calculatedMonthlyPayment"
     },
     {
       "label": "Zinsbindung:",
@@ -807,6 +807,25 @@
         <dc:Bounds x="1890" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_1s8guao" bpmnElement="Activity_03gh8up">
+        <dc:Bounds x="2600" y="150" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0narp7x_di" bpmnElement="Event_0narp7x">
+        <dc:Bounds x="2912" y="172" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05k1nfd_di" bpmnElement="Activity_11rc25e">
+        <dc:Bounds x="2670" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ez3mfd_di" bpmnElement="Activity_0oizj3n">
+        <dc:Bounds x="2830" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0xsivro_di" bpmnElement="Activity_0ptlvck">
+        <dc:Bounds x="2960" y="610" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19ixev8_di" bpmnElement="Activity_0erwyi5">
+        <dc:Bounds x="3120" y="620" width="100" height="80" />
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0zprrnj_di" bpmnElement="Activity_03xrfe8">
         <dc:Bounds x="600" y="570" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -837,25 +856,6 @@
       <bpmndi:BPMNShape id="Activity_08d6syd_di" bpmnElement="Activity_1jwmrx3">
         <dc:Bounds x="760" y="150" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1kyn8kt_di" bpmnElement="Activity_1dc595g">
-        <dc:Bounds x="2240" y="150" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0narp7x_di" bpmnElement="Event_0narp7x">
-        <dc:Bounds x="2912" y="172" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_05k1nfd_di" bpmnElement="Activity_11rc25e">
-        <dc:Bounds x="2670" y="610" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0ez3mfd_di" bpmnElement="Activity_0oizj3n">
-        <dc:Bounds x="2830" y="610" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0xsivro_di" bpmnElement="Activity_0ptlvck">
-        <dc:Bounds x="2960" y="610" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_19ixev8_di" bpmnElement="Activity_0erwyi5">
-        <dc:Bounds x="3120" y="620" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_014w7hg_di" bpmnElement="Activity_0hnr2c5">
         <dc:Bounds x="2770" y="150" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -863,8 +863,8 @@
         <dc:Bounds x="2410" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_1s8guao" bpmnElement="Activity_03gh8up">
-        <dc:Bounds x="2600" y="150" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_1kyn8kt_di" bpmnElement="Activity_1dc595g">
+        <dc:Bounds x="2240" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1l5i3ho_di" bpmnElement="Flow_1l5i3ho">

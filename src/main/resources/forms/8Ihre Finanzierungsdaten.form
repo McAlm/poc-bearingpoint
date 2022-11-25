@@ -9,7 +9,7 @@
       "label": "Kreditrate:",
       "type": "textfield",
       "id": "Field_08ggz7k",
-      "key": "kreditrate"
+      "key": "calculatedMonthlyPayment"
     },
     {
       "label": "Zinsbindung:",
