@@ -19,3 +19,5 @@ spring:
       hbm2ddl.auto: create   
     show-sql: true
     generate-ddl: true
+
+MY_TOKEN: mytoken
