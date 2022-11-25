@@ -33,3 +33,5 @@ out/
 workspace.code-workspace
 src/main/resources/.DS_Store
 .DS_Store
+
+/docker/postgres/pgdata
