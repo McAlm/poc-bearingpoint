@@ -751,13 +751,6 @@
       <bpmn:outgoing>Flow_1dc7zkm</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_038ex0f" sourceRef="Activity_0hnr2c5" targetRef="Event_0narp7x" />
-    <bpmn:serviceTask id="Activity_0hnr2c5" name="Finanzierungsdaten persistieren">
-      <bpmn:extensionElements>
-        <zeebe:taskDefinition type="persistMortgage" />
-      </bpmn:extensionElements>
-      <bpmn:incoming>Flow_05behd2</bpmn:incoming>
-      <bpmn:outgoing>Flow_038ex0f</bpmn:outgoing>
-    </bpmn:serviceTask>
     <bpmn:sequenceFlow id="Flow_058ibiw" sourceRef="Activity_0rp7lgw" targetRef="Activity_03gh8up" />
     <bpmn:serviceTask id="Activity_0rp7lgw" name="Berechne Finanzierung">
       <bpmn:extensionElements>
@@ -774,6 +767,24 @@
       <bpmn:incoming>Flow_08cxdgx</bpmn:incoming>
       <bpmn:outgoing>Flow_054hkat</bpmn:outgoing>
     </bpmn:businessRuleTask>
+    <bpmn:sendTask id="Activity_0hnr2c5" name="Finanzierungsdaten persistieren">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="sendEmail" />
+        <zeebe:ioMapping>
+          <zeebe:input source="stefan.wiese@camunda.com" target="from.email" />
+          <zeebe:input source="=firstname" target="to.name" />
+          <zeebe:input source="=emailAdress" target="to.email" />
+          <zeebe:input source="byTemplate" target="unMappedFieldNotUseInModel.mailType" />
+          <zeebe:input source="d-2a84ab381151488ea51d1e5780a922c9" target="template.id" />
+          <zeebe:input source="secrets.SENDGRID_DEMO" target="apiKey" />
+          <zeebe:input source="Camunbankia" target="from.name" />
+          <zeebe:input source="={&#34;name&#34;: firstname,&#10;&#34;monthlyPayment&#34;: calculatedMonthlyPayment}" target="template.data" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_05behd2</bpmn:incoming>
+      <bpmn:outgoing>Flow_038ex0f</bpmn:outgoing>
+    </bpmn:sendTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="DigitaleBaufinanzierung">
@@ -856,9 +867,6 @@
       <bpmndi:BPMNShape id="Activity_08d6syd_di" bpmnElement="Activity_1jwmrx3">
         <dc:Bounds x="760" y="150" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_014w7hg_di" bpmnElement="Activity_0hnr2c5">
-        <dc:Bounds x="2770" y="150" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1ovo57w_di" bpmnElement="Activity_0rp7lgw">
         <dc:Bounds x="2410" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
@@ -866,6 +874,9 @@
       <bpmndi:BPMNShape id="Activity_1kyn8kt_di" bpmnElement="Activity_1dc595g">
         <dc:Bounds x="2240" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0mnv5g6_di" bpmnElement="Activity_0hnr2c5">
+        <dc:Bounds x="2770" y="150" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_1l5i3ho_di" bpmnElement="Flow_1l5i3ho">
         <di:waypoint x="1030" y="190" />
