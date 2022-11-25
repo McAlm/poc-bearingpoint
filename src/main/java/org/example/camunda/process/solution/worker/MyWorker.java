@@ -2,7 +2,8 @@ package org.example.camunda.process.solution.worker;
 
 import io.camunda.zeebe.spring.client.annotation.JobWorker;
 import io.camunda.zeebe.spring.client.annotation.VariablesAsType;
-import org.example.camunda.process.solution.ProcessVariables;
+
+import org.example.camunda.process.solution.dto.ProcessVariables;
 import org.example.camunda.process.solution.service.MyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

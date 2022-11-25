@@ -1,4 +1,6 @@
-package org.example.camunda.process.solution.worker;
+package org.example.camunda.process.solution.dto;
+
+import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
@@ -13,6 +15,21 @@ public class MortgageData {
     private Integer wunschlaufzeit;
     private Long kaufpreis;
     private Long einkommen_1, einkommen_2;
+    private Double interestRate;
+    private BigDecimal calculatedMonthlyPayment;
+    
+    public BigDecimal getCalculatedMonthlyPayment() {
+        return calculatedMonthlyPayment;
+    }
+    public void setCalculatedMonthlyPayment(BigDecimal calculatedMonthlyPayment) {
+        this.calculatedMonthlyPayment = calculatedMonthlyPayment;
+    }
+    public Double getInterestRate() {
+        return interestRate;
+    }
+    public void setInterestRate(Double interestRate) {
+        this.interestRate = interestRate;
+    }
     public Integer getZinsBindung() {
         return zinsBindung;
     }

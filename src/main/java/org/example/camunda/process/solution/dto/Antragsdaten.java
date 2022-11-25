@@ -1,4 +1,4 @@
-package org.example.camunda.process.solution;
+package org.example.camunda.process.solution.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;

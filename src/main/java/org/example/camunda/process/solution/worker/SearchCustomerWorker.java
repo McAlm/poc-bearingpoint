@@ -2,7 +2,7 @@ package org.example.camunda.process.solution.worker;
 
 import java.util.HashMap;
 
-import org.example.camunda.process.solution.Antragsdaten;
+import org.example.camunda.process.solution.dto.Antragsdaten;
 import org.example.camunda.process.solution.entity.Customer;
 import org.example.camunda.process.solution.repository.CustomerRepository;
 import org.slf4j.Logger;

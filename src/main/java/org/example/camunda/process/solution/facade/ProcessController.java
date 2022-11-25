@@ -1,8 +1,8 @@
 package org.example.camunda.process.solution.facade;
 
-import org.example.camunda.process.solution.Antragsdaten;
 import org.example.camunda.process.solution.ProcessConstants;
-import org.example.camunda.process.solution.ProcessVariables;
+import org.example.camunda.process.solution.dto.Antragsdaten;
+import org.example.camunda.process.solution.dto.ProcessVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PathVariable;
